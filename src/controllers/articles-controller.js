@@ -28,11 +28,11 @@ module.exports = {
         });
     },
 
-    getByAuthor(req,res){
-        Article.find({author:req.params.name})
-        .lean()
-                    .then(function(data){               
-                res.render('articles/index',{articles:data})
+    getByAuthor(req, res) {
+        Article.find({ author: req.params.name })
+            .lean()
+            .then(function (data) {
+                res.render('articles/index', { articles: data })
             })
     }
 
